@@ -1,0 +1,28 @@
+body {
+  background: url('bg_img.jpg') center center / cover no-repeat fixed;
+  height: 100vh;
+  width: 100vw;
+}  
+
+  input:valid {
+    border: 1px solid black;
+  }
+.btn-icon{
+    border-color: gray;
+    background-color: white;
+}
+
+hr {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border: 0;
+    border-top: 2px solid rgba(0, 0, 0, 0.1);
+}
+a{
+    color: black;
+    font-size: 17px;
+    font-weight: 500;
+}
+a:hover{
+    text-decoration: none;
+}
