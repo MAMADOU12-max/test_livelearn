@@ -35,7 +35,8 @@
     <!------------------------------------------- End Navbar  ------------------------------------>
 
     <div class="container-fluid">
-        <div>       
+        <div>   
+
             <!-- Modal Se connecter -->
             <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
                 <div class="modal-dialog" role="document">
@@ -132,7 +133,7 @@
                         </div>
 
                     </div>
-                </div>
+            </div>
 
 
             <!-- Modal Sign In -->
@@ -174,11 +175,16 @@
                                         <span  class="d-sm-block d-none">Connect with Apple</span> <span></span>
                                     </button>
 
-                                    <button class="btn btn-block d-flex justify-content-sm-between p-2 justify-content-center p-2 btn-icon my-3">
+                                    <button class="btn btn-block d-flex justify-content-sm-between p-2 justify-content-center p-2 btn-icon my-3"
+                                    data-toggle="modal" data-target="#SignInWithEmail"  aria-label="Close" data-dismiss="modal">
                                         <i class="far fa-envelope text-dark ml-2" style="font-size: 22px;"></i>
                                         <span class="d-sm-block d-none">Sign in with email address</span> <span></span>
                                     </button>
 
+                                    <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"
+                                    aria-label="Close" data-dismiss="modal">
+                                        Launch demo modal
+                                   </button> -->
 
                                 </form>
                             </div>
@@ -188,6 +194,121 @@
                 </div>
             </div>
 
+
+            <!-- Modal Sign End -->
+            <div class="modal fade" id="SignInWithEmail" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document" style="overflow-y: scroll; max-height:90%;  margin-top: 50px; margin-bottom:50px;">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close" 
+                                class="text-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                                    <i class="fas fa-angle-left"></i>
+                                </button>
+                            </h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body  px-5">
+                            <form id="form" class="form">
+
+                                <div class="mb-4">
+                                    <h3 class="text-center my-2"> Finish your sign in</h3>
+                                </div>
+
+                                 <!-- Name input -->
+                                 <div class="mb-4 form-outline">
+                                    <label class="form-label" for="name">Name</label>
+                                    <input type="text" class="form-control" id="name" />
+                                    <span class="substitle-text" for="">Your name will be in public on your meetup profil</span>
+                                </div>
+
+                                <!-- Email input -->
+                                <div class="mb-4 form-outline">
+                                    <label class="form-label" for="email">Adresse e-mail</label>
+                                    <input type="email" class="form-control" placeholder="a@florin-pop.com" id="email" />
+                                    <span class="substitle-text">We will use your email for sending you news</span>
+                                </div>
+                                
+                                <!-- Password input -->
+                                <div class="form-outline mb-4">
+                                    <!-- <label class="form-label" for="form2Example2">Mot de passe</label> -->
+                                    <div class="row mb-2 d-flex justify-content-between">
+                                        <div class="col-md-5">
+                                            <label class="form-check-label" for="password"> Password </label>
+                                        </div>                               
+                                        <!-- <div class="col d-flex justify-content-end">
+                                            <a href="" class="px-0">Mot de passe oublié?</a>
+                                        </div> -->
+                                    </div>
+                                
+                                    <div class="input-group" id="show_hide_password">
+                                        <input type="password" id="password" class="form-control" aria-label="Amount (to the nearest dollar)">
+                                        <div class="input-group-append" >
+                                        <span class="input-group-text" style="background-color: white;"><a href=""><i class="fa fa-eye-slash" aria-hidden="true"></i></a></span>
+                                        </div>
+                                    </div>
+                                    <!-- <small>Error message</small> -->
+                                </div>
+
+                                  <!-- Position Input -->
+                                <div class="form-outline mb-4">
+                                    <!-- <label class="form-label" for="form2Example2">Mot de passe</label> -->
+                                    <div class="row mb-2 d-flex justify-content-between">
+                                        <div class="col-md-5">
+                                            <label class="form-check-label" for="password"> Position </label>
+                                        </div>                               
+                                        <!-- <div class="col d-flex justify-content-end">
+                                            <a href="" class="px-0">Mot de passe oublié?</a>
+                                        </div> -->
+                                    </div> 
+
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text"><i class="fas fa-map-marker-alt"></i></span>
+                                        <input type="text" class="form-control" placeholder="your position" aria-label="Server">
+                                    </div>
+                                </div>
+                                    
+                                <!-- 2 column grid layout for inline styling -->
+                                <div class="row mb-4">
+                                    <div class="col-12 d-flex justify-content-start">
+                                        <!-- Checkbox -->
+                                        <div class="form-check">
+                                            <label for="" class="">Age</label> <br>
+                                            <input class="form-check-input" type="checkbox" value="" id="form2Example34" checked />
+                                            <label class="form-check-label" for="form2Example34">I have eighteen years old or more </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Submit button -->
+                                <button type="submit" class="btn btn-block mb-4 p-2" style="background-color: #F77070;"> 
+                                    <span class="text-white font-weight-bold " style="font-size: 20px;"> Sign In</span>
+                                </button>
+
+                            
+                                    <!-- Connect with Social media -->
+                                <div class="col-md-12">
+
+                                    <div class="text-center py-3">
+                                        <span class="footer-text">
+                                            By signing, you are agree <span class="footer-text-underline">conditions of user</span>, the 
+                                            <span class="footer-text-underline">politic of private and cookies</span>
+                                        </span>
+                                    </div>
+                                </div>
+
+                            </form>
+
+                            <div class="text-center">
+                                <p>Already a member? <a href="#" data-dismiss="modal" aria-label="Close" class="text-primary"
+                                    data-toggle="modal" data-target="#exampleModalCenter">Sign up</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
         </div>
     </div>
